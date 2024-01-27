@@ -67,8 +67,8 @@
       </div>
       <div class="row">
         <div class="col-md-12 text-center">
-          <p>Payment will be made on delivery.</p>
-          <a href="checkout.html" class="btn btn-black btn-lg py-3 btn-block">Proceed To Checkout</a>
+          <p>Le paiement sera effectué à la livraison.</p>
+          <a href="checkout.html?total=<%= calculateTotal() %>" class="btn btn-black btn-lg py-3 btn-block">Proceed To Checkout</a>
         </div>
       </div>
     </div>
@@ -99,18 +99,18 @@
 	  
 			cartHTML += '<tr>';
 			cartHTML += '<td>' + item.name + '</td>';
-			cartHTML += '<td>$' + item.price + '</td>';
+			cartHTML += '<td>' + item.price + ' dhs</td>';
 			cartHTML += '<td><select class="form-select" onchange="updateQuantity(' + index + ', this.value)">';
 			for (var i = 1; i <= 10; i++) {
 			  cartHTML += '<option value="' + i + '"' + (item.quantity == i ? ' selected' : '') + '>' + i + '</option>';
 			}
 			cartHTML += '</select></td>';
-			cartHTML += '<td>$' + totalPrice.toFixed(2) + '</td>';
+			cartHTML += '<td>' + totalPrice.toFixed(2) + ' dhs</td>';
 			cartHTML += '<td><button class="btn btn-danger btn-sm" onclick="removeItem(' + index + ')">Remove</button></td>';
 			cartHTML += '</tr>';
 		  });
 	  
-		  cartHTML += '<tr><td colspan="3">Total:</td><td>$' + total.toFixed(2) + '</td><td></td></tr>'; // Display total
+		  cartHTML += '<tr><td colspan="3">Total:</td><td>' + total.toFixed(2) + ' dhs</td><td></td></tr>'; // Display total
 		  cartHTML += '</tbody></table>';
 		}
 	  
