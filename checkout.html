@@ -123,7 +123,7 @@
               <div class="form-group row">
                 <div class="col-md-6">
                   <label for="statecountry" class="text-black">City <span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="statecountry" name="statecountry" required>
+                  <input type="text" class="form-control" id="city" name="city" required>
                 </div>
                 <div class="col-md-6">
                   <label for="postalzip" class="text-black">Postal / Zip <span class="text-danger">*</span></label>
@@ -271,10 +271,16 @@
     }
 
     // Display order items and total price on page load
-    window.onload = function() {
-      displayOrderItems();
-      document.getElementById('total-price').textContent = calculateTotalPrice();
-    };
+    window.onload = function () {
+		var orderId = sessionStorage.getItem('order-id');
+		if (!orderId) {
+			orderId = generateRandomOrderId();
+			sessionStorage.setItem('order-id', orderId);
+		}
+		displayOrderItemsAndOrderId();
+		displayOrderItems();
+		document.getElementById('total-price').textContent = calculateTotalPrice();
+	};
 
     // Place order button click event
     document.getElementById('place-order-btn').addEventListener('click', function() {
@@ -293,18 +299,18 @@
 
 	  function placeOrder() {
 		// Validate form fields
+		var orderId = sessionStorage.getItem('order-id');
 		var firstname = document.getElementById('fname').value;
 		var lastname = document.getElementById('lname').value;
 		var email = document.getElementById('email').value;
 		var address = document.getElementById('address').value;
+		var city = document.generateRandomOrderId('city').value;
 		
 		// Perform form validation here
 		
 		// If form is valid, proceed with placing the order
-		// You can add your logic here to send the billing details to the server
-		// For example, you can use AJAX to send the form data to a PHP script
+		//AJAX to send the form data to a PHP script
 		
-		// Example AJAX request
 		
 		var xhr = new XMLHttpRequest();
 		xhr.open('POST', 'process_form.php', true);
@@ -312,6 +318,7 @@
 		xhr.onload = function() {
 		  if (xhr.status === 200) {
 			// Request was successful
+			window.location.href = 'thankyou.html';
 			// You can handle the response here
 		  } else {
 			// Request failed
@@ -329,13 +336,11 @@
 		
 	  }
 
+
       if (isValid) {
         // Generate and display Order ID
 		sessionStorage.removeItem('order-id');
-
-		
-
-		window.location.href = 'thankyou.html'; // Change 'thankyou.html' to the URL of your thank you page
+		 // Change 'thankyou.html' to the URL of your thank you page
       } else {
         alert('Please fill in all required fields.');
       }
