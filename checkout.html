@@ -258,6 +258,7 @@
 		  sessionStorage.setItem('order-id', orderId);
 		}
 		displayOrderItemsAndOrderId();
+		document.getElementById('total-price').textContent = calculateTotalPrice();
 	  };
 	  
 
@@ -271,16 +272,10 @@
     }
 
     // Display order items and total price on page load
-    window.onload = function () {
-		var orderId = sessionStorage.getItem('order-id');
-		if (!orderId) {
-			orderId = generateRandomOrderId();
-			sessionStorage.setItem('order-id', orderId);
-		}
-		displayOrderItemsAndOrderId();
-		displayOrderItems();
-		document.getElementById('total-price').textContent = calculateTotalPrice();
-	};
+    window.onload = function() {
+      displayOrderItems();
+      document.getElementById('total-price').textContent = calculateTotalPrice();
+    };
 
     // Place order button click event
     document.getElementById('place-order-btn').addEventListener('click', function() {
