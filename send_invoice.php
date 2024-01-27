@@ -1,5 +1,5 @@
 <?php
-require_once('C:/xampp/htdocs/tc-lib-pdf-8.0.55/src/tcpdf.php');
+require_once('tc-lib-pdf-8.0.55/src/Tcpdf.php');
 
 // Retrieve order details from POST data
 $firstname = $_POST['fname'];
