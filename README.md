@@ -6,7 +6,7 @@ For source code click [here](https://github.com/aminerochdi1/IKEAM/tree/master)
 
 #SITE
 
-Click [here](https://www.figma.com/proto/GKl5OlkubYdNtnKZWXgbXR/html.to.design-(Community)?type=design&node-id=4-515&t=4TnEZwoM9ASetXLT-1&scaling=min-zoom&page-id=0%3A1&mode=design](https://friendly-stroopwafel-d49b5c.netlify.app/](https://friendly-stroopwafel-d49b5c.netlify.app/)))
+Click [here](https://www.figma.com/proto/GKl5OlkubYdNtnKZWXgbXR/html.to.design-(Community)?type=design&node-id=4-515&t=4TnEZwoM9ASetXLT-1&scaling=min-zoom&page-id=0%3A1&mode=design](https://friendly-stroopwafel-d49b5c.netlify.app/](https://friendly-stroopwafel-d49b5c.netlify.app/)](https://friendly-stroopwafel-d49b5c.netlify.app/))
 
 
 #PROTOTYPE 
