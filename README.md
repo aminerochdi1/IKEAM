@@ -1,10 +1,10 @@
-# IKEAM
+- IKEAM
 
 ![ikeam with bg](https://github.com/aminerochdi1/IKEAM/assets/84997432/c8c4a029-0807-4a95-a62d-a02e07e1d388)
 
 For source code click [here](https://github.com/aminerochdi1/IKEAM/tree/master)
 
-#HOME
+#ABOUT US
 
 ![about-us](https://github.com/aminerochdi1/IKEAM/assets/84997432/37d0d7d3-cde7-4585-8398-7c2fe0b75918)
 
